@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <script>
+    //1
+    const sayError = () => {
+    alert("Some error occurred!");
+};
+sayError();
+
+    //2
+    const showError = (errorMessage) => {
+    alert("Error " + errorMessage + " occurred!");
+};
+showError('Out of memory');
+    //3
+    const createHeaders = (N) => {
+        for (let i = 1; i <= N; i++) {
+            document.write(`<h2>Header${i}</h2>`);
+        }
+    };
+
+    createHeaders(10);
+    //4
+    const checkPassword = (x) => {
+    const lowerCaseX = x.toLowerCase();
+
+    return lowerCaseX === "step" || lowerCaseX === "web" || lowerCaseX === "javascript";
+};
+
+// console.log(checkPassword("Step"));
+// console.log(checkPassword("Web")); 
+// console.log(checkPassword("JavaScript"));
+// console.log(checkPassword("Invalid"));
+
+    //5
+    const sign = (x) => {
+    return (x > 0) ? 1 : (x < 0) ? -1 : 0;
+};
+    console.log(sign(5));
+    console.log(sign(-3));
+    console.log(sign(0));
+    //6
+    const DayName = (dayNumber) => {
+    if (dayNumber === 0) {
+        return "0-Sunday";
+    } else if (dayNumber === 1) {
+        return "1-Monday";
+    } else if (dayNumber === 2) {
+        return "2-Tuesday";
+    } else if (dayNumber === 3) {
+        return "3-Wednesday";
+    } else if (dayNumber === 4) {
+        return "4-Thursday";
+    } else if (dayNumber === 5) {
+        return "5-Friday";
+    } else if (dayNumber === 6) {
+        return "6-Saturday";
+    } else {
+        return "Invalid day number";
+    }
+};
+
+console.log(DayName(1));
+console.log(DayName(4)); 
+console.log(DayName(10)); 
+    </script>
+</body>
+</html>
